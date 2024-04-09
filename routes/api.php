@@ -10,5 +10,5 @@ Route::get('/produtos', [ProdutoController::class, 'index']);
 Route::post('/produtos', [ProdutoController::class, 'store']);
 
 Route::get('/clientes', [ClienteController::class, 'index']);
-Route::post('/clientes', [ClienteController::class, 'store']);
+Route::post('/clientes/cadastro', [ClienteController::class, 'store']);
 

@@ -18,6 +18,7 @@ class ClienteController extends Controller
                 'endereco' => $clientes -> endereco,
                 'email' => $clientes -> email,
                 'password' => $clientes -> password,
+                'cpf' => $clientes -> cpf,
                 'foto' => asset('storage/' . $clientes-> foto)
             ];
         });
@@ -30,7 +31,7 @@ class ClienteController extends Controller
         if($request->hasFile('foto')){
             $foto = $request->file('foto');
             $nomeFoto = time().'.'.$foto->getClientOriginalExtension();
-            $caminhoImagem = $foto->storeAs('fotos/clientes', $nomeFoto, 'public');
+            $caminhoImagem = $foto->storeAs('imagens/clientes', $nomeFoto, 'public');
             $clienteData['foto'] = $caminhoImagem;
         }
         $cliente = Cliente::create($clienteData);

@@ -14,6 +14,7 @@ class Cliente extends Model
         'endereco',
         'email',
         'password',
+        'cpf',
         'foto'
     ];
 }
