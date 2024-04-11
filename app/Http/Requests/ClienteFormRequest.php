@@ -37,7 +37,7 @@ class ClienteFormRequest extends FormRequest
         throw new HttpResponseException(response()->json([
             'success' => false,
             'error' => $validator->errors()
-        ]));
+        ], 422));
     }
 
     public function messages(){
