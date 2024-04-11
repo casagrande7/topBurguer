@@ -60,7 +60,6 @@ class ClienteFormRequest extends FormRequest
             'endereco.min' => 'O campo Endereço deve conter no mínimo 5 caracteres',
             'password.required' => 'O campo Password é obrigatório',
             'foto.required' => 'O campo Foto é obrigatório'
-
         ];
     }
 }
